@@ -1,5 +1,5 @@
 ---
-title: "climateR"
+title: "webscrapclimateR"
 output: github_document
 ---
 
@@ -14,7 +14,7 @@ An R package for retrieving monthly climatological data from the Climatempo plat
 
 ## Installation
 
-You can install the development version of **climateR** from GitHub:
+You can install the development version of **webscrapclimateR** from GitHub:
 
 ```{r, eval=FALSE}
 # Install development version from GitHub
@@ -22,12 +22,12 @@ if (!requireNamespace("remotes", quietly = TRUE)) {
   install.packages("remotes")
 }
 
-remotes::install_github("jrz-s/climateR")
+remotes::install_github("jrz-s/webscrapclimateR")
 ```
 
 ## Overview
 
-**climateR** enables users to:
+**webscrapclimateR** enables users to:
 
 - Search for locations using flexible input (region, state, or city)
 - Retrieve monthly climatological data (temperature and precipitation)
@@ -37,7 +37,7 @@ remotes::install_github("jrz-s/climateR")
 ## Example
 
 ```{r, eval=FALSE}
-library(climateR)
+library(webscrapclimateR)
 
 # Retrieve climate list for Aracaju (Sergipe, Brazil)
 df <- search_locations(state = "se", city = "aracaju")

@@ -1,4 +1,4 @@
-climateR
+webscrapclimateR
 ================
 
 # climateR
@@ -15,7 +15,8 @@ for ecological, environmental, and data science applications.
 
 ## Installation
 
-You can install the development version of **climateR** from GitHub:
+You can install the development version of **webscrapclimateR** from
+GitHub:
 
 ``` r
 # Install development version from GitHub
@@ -23,12 +24,12 @@ if (!requireNamespace("remotes", quietly = TRUE)) {
   install.packages("remotes")
 }
 
-remotes::install_github("jrz-s/climateR")
+remotes::install_github("jrz-s/webscrapclimateR")
 ```
 
 ## Overview
 
-**climateR** enables users to:
+**webscrapclimateR** enables users to:
 
 - Search for locations using flexible input (region, state, or city)
 - Retrieve monthly climatological data (temperature and precipitation)
@@ -38,7 +39,11 @@ remotes::install_github("jrz-s/climateR")
 ## Example
 
 ``` r
-library(climateR)
+library(webscrapclimateR)
+
+# Retrieve climate list for Aracaju (Sergipe, Brazil)
+df <- search_locations(state = "se", city = "aracaju")
+climate_list(df)
 
 # Retrieve climate data for Aracaju (Sergipe, Brazil)
 climate_data(state = "se", city = "aracaju")
