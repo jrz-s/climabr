@@ -4,7 +4,7 @@
 \alias{match_state}
 \title{Match state input}
 \usage{
-match_state(state_input)
+match_state(state)
 }
 \arguments{
 \item{state_input}{Character vector containing user-provided state names or abbreviations.}

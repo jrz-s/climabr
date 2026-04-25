@@ -24,10 +24,6 @@ search_locations <- function(region = NULL,
     
     region_match <- match_region(region)
     
-    if (length(region_match) == 0) {
-      warning("No matching regions found")
-    }
-    
     pattern <- paste(region_match, collapse = "|")
     
     df <- df %>%
@@ -43,10 +39,6 @@ search_locations <- function(region = NULL,
   if (!is.null(state)) {
     
     state_abbr <- match_state(state)
-    
-    if (length(state_abbr) == 0) {
-      warning("No matching states found")
-    }
     
     pattern <- paste(state_abbr, collapse = "|")
     
@@ -74,14 +66,55 @@ search_locations <- function(region = NULL,
   
   # -------- VALIDATION --------
   
-  # Nenhum resultado
+  #Nenhum resultado
   if (nrow(df) == 0) {
-    rlang::abort(
-      "No locations found. Please refine your query."
-    )
+    
+    if (!is.null(city) && !is.null(state)) {
+      
+      rlang::abort(
+        paste0(
+          "No locations found for city '", city,
+          "' in state '", state, "'. ",
+          "Please refine your query."
+        )
+      )
+      
+    } else if (!is.null(city)) {
+      
+      rlang::abort(
+        paste0(
+          "No locations found for city '", city, "'. ",
+          "Please refine your query."
+        )
+      )
+      
+    } else if (!is.null(state)) {
+      
+      rlang::abort(
+        paste0(
+          "No locations found for state '", state, "'. ",
+          "Please refine your query."
+        )
+      )
+      
+    } else if (!is.null(region)) {
+      
+      rlang::abort(
+        paste0(
+          "No locations found for region '", region, "'. ",
+          "Please refine your query."
+        )
+      )
+      
+    } else {
+      
+      rlang::abort(
+        "No locations found. Please refine your query."
+      )
+    }
   }
   
-  # Multiplos resultados (quando city foi usada)
+  #Multiplos resultados (quando city foi usada)
   if (!is.null(city) && nrow(df) > 1) {
     rlang::abort(
       paste0(
