@@ -4,7 +4,7 @@
 \alias{match_region}
 \title{Match region input}
 \usage{
-match_region(region_input)
+match_region(region)
 }
 \arguments{
 \item{region_input}{Character vector containing user-provided region names.}

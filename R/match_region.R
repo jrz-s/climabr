@@ -9,61 +9,23 @@
 #' @importFrom stringr str_detect str_remove str_to_lower str_sub
 #' @importFrom purrr map map_dfr compact
 #' @importFrom magrittr %>%
-match_region <- function(region_input) {
-
-  region_table <- tibble::tibble(
-    region_full = c("north","northeast","centralwest","southeast","south"),
-    region_pt   = c("norte","nordeste","centrooeste","sudeste","sul")
+match_region <- function(region) {
+  
+  valid_regions <- c(
+    "north", "northeast", "central-west",
+    "southeast", "south"
   )
-
-  input <- utils_normalize_text(region_input)
-
-  matches <- purrr::map(input, function(x) {
-
-    # -------- 1. MATCH EXATO (EN) --------
-    if (x %in% region_table$region_full) {
-      return(x)
-    }
-
-    # -------- 2. MATCH EXATO (PT → EN) --------
-    idx_pt <- which(region_table$region_pt == x)
-
-    if (length(idx_pt) == 1) {
-      return(region_table$region_full[idx_pt])
-    }
-
-    # -------- 3. MATCH PARCIAL --------
-    idx_partial <- which(
-      stringr::str_detect(region_table$region_full, x) |
-        stringr::str_detect(region_table$region_pt, x)
-    )
-
-    candidates <- unique(region_table$region_full[idx_partial])
-
-    # -------- DECISAO --------
-
-    if (length(candidates) == 1) {
-      return(candidates)
-    }
-
-    if (length(candidates) > 1) {
-      stop(
-        paste0(
-          "Ambiguous region input: '", x, "'.\n",
-          "Possible matches: ", paste(candidates, collapse = ", "), "\n",
-          "Please be more specific."
-        )
-      )
-    }
-
-    # -------- NAO ENCONTRADO --------
+  
+  region_clean <- utils_normalize_text(region)
+  
+  if (!region_clean %in% valid_regions) {
     rlang::abort(
-      message = paste0(
+      paste0(
         "Invalid region: '", region, "'. ",
-        "Please provide a valid Brazilian region (e.g., 'norte', 'sudeste')."
+        "Please provide a valid region (north, northeast, central-west, southeast, south)."
       )
     )
-  })
-
-  unique(unlist(matches))
+  }
+  
+  return(region_clean)
 }
