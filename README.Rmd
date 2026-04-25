@@ -95,23 +95,23 @@ This package is provided "as is" without warranty of any kind. Its functionality
 
 ## Author
 
-Jhonatan Rafael Zárate-Salazar, PhD
-Postdoctoral Researcher
-Graduate Program in Ecology and Conservation
-Federal University of Sergipe (UFS), São Cristóvão, Sergipe, Brazil
+Jhonatan Rafael Zárate-Salazar, PhD<br>
+Postdoctoral Researcher<br>
+Graduate Program in Ecology and Conservation<br>
+Federal University of Sergipe (UFS), São Cristóvão, Sergipe, Brazil<br>
 
-📧 Email: rzaratesalazar@gmail.com
-🔗 ORCID: https://orcid.org/0000-0001-9251-5340
-💻 GitHub: https://github.com/jrz-s
-🎓 Google Scholar: https://scholar.google.com/citations?user=6ECRpM4AAAAJ&hl=pt-BR
+📧 Email: rzaratesalazar@gmail.com<br>
+🔗 ORCID: https://orcid.org/0000-0001-9251-5340<br>
+💻 GitHub: https://github.com/jrz-s<br>
+🎓 Google Scholar: https://scholar.google.com/citations?user=6ECRpM4AAAAJ&hl=pt-BR<br>
 
 ## Collaborators
 
-Eduardo Vinícius S. Oliveira, PhD
-Postdoctoral Researcher, Graduate Program in Ecology and Conservation
-Federal University of Sergipe, São Cristóvão, Sergipe, Brazil
+Eduardo Vinícius S. Oliveira, PhD<br>
+Postdoctoral Researcher, Graduate Program in Ecology and Conservation<br>
+Federal University of Sergipe, São Cristóvão, Sergipe, Brazil<br>
 
-Sidney Feitosa Gouveia, PhD
-Professor, Department of Ecology
+Sidney Feitosa Gouveia, PhD<br>
+Professor, Department of Ecology<br>
 Federal University of Sergipe, São Cristóvão, Sergipe, Brazil
 
