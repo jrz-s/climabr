@@ -11,27 +11,21 @@
 #' @importFrom magrittr %>%
 match_state <- function(state) {
   
-  # normalizar entrada
-  state_clean <- utils_normalize_text(state)
-  
-  # vetor de estados válidos (exemplo)
   valid_states <- c(
     "ac","al","ap","am","ba","ce","df","es","go",
     "ma","mt","ms","mg","pa","pb","pr","pe","pi",
     "rj","rn","rs","ro","rr","sc","sp","se","to"
   )
   
-  # matching
-  matches <- valid_states[
-    stringr::str_detect(valid_states, state_clean)
-  ]
+  state_clean <- utils_normalize_text(state)
   
-  # validação
+  matches <- valid_states[valid_states == state_clean]
+  
   if (length(matches) == 0) {
     rlang::abort(
       paste0(
-        "Invalid state: '", state, "'. ",
-        "Please provide a valid Brazilian state abbreviation (e.g., 'se', 'sp')."
+        "No state found for: ", state,
+        ". Please provide a valid Brazilian state abbreviation (e.g., 'se', 'sp')."
       )
     )
   }
