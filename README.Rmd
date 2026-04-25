@@ -1,18 +1,20 @@
 ---
-title: "webscrapclimateR"
+title: "climabr"
 output: github_document
 ---
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-An R package for retrieving monthly climatological data from the Climatempo platform using automated web scraping. The package provides flexible tools to search locations and extract structured climate data for ecological, environmental, and data science applications.
+An R package for providing historical (30-year) average monthly climatological data (minimum temperature, maximum temperature, and precipitation) for municipalities in Brazil. Data are retrieved from the Climatempo platform through automated web scraping. The package provides flexible tools for location search and structured climate data extraction, supporting applications in ecology, environmental science, and data science.
+
+This package is intended for research and educational purposes, and users should ensure compliance with the terms of use of the data source.
 
 ---
 
 ## Installation
 
-You can install the development version of **webscrapclimateR** from GitHub:
+You can install the development version of **climabr** from GitHub:
 
 ```{r, eval=FALSE}
 # Install development version from GitHub
@@ -20,12 +22,12 @@ if (!requireNamespace("remotes", quietly = TRUE)) {
   install.packages("remotes")
 }
 
-remotes::install_github("jrz-s/webscrapclimateR")
+remotes::install_github("jrz-s/climabr")
 ```
 
 ## Overview
 
-**webscrapclimateR** enables users to:
+**climabr** enables users to:
 
 - Search for locations using flexible input (region, state, or city)
 - Retrieve monthly climatological data (temperature and precipitation)
@@ -35,7 +37,7 @@ remotes::install_github("jrz-s/webscrapclimateR")
 ## Example
 
 ```{r, eval=FALSE}
-library(webscrapclimateR)
+library(climabr)
 
 # Retrieve climate list for Aracaju (Sergipe, Brazil)
 df <- search_locations(state = "se", city = "aracaju")
@@ -77,24 +79,39 @@ The main function returns a tidy tibble with the following variables:
 
 ## Disclaimer
 
-This package performs automated web scraping from the Climatempo website.
+This package performs automated web scraping from the Climatempo website to facilitate access to publicly available climatological data. It is designed to support research, educational, and non-commercial applications by providing a structured and reproducible approach to retrieving climate information.
 
-Users should:
+Users are responsible for ensuring that their use of this package complies with the terms of service and policies of the data provider.
 
-- Avoid excessive or high-frequency requests
-- Respect the terms of service of the data provider
-- Use appropriate delays between requests
+When using this package, users should:
 
-The authors are not affiliated with Climatempo.
+- Avoid excessive or high-frequency requests that may overload the source servers
+- Implement appropriate delays between requests
+- Use the data responsibly and ethically
+
+The authors are not affiliated with, endorsed by, or sponsored by Climatempo.
+
+This package is provided "as is" without warranty of any kind. Its functionality may change over time as the source website evolves, and users should be aware that web scraping workflows are inherently subject to structural changes in the data source.
 
 ## Author
 
-Developed by Jhonatan Rafael Zárate-Salazar, PhD
-Postdoctoral researcher, Graduate Program in Ecology and Conservation
-Federal University of Sergipe, São Cristóvão, Sergipe, Brazil
+Jhonatan Rafael Zárate-Salazar, PhD
+Postdoctoral Researcher
+Graduate Program in Ecology and Conservation
+Federal University of Sergipe (UFS), São Cristóvão, Sergipe, Brazil
+
+📧 Email: rzaratesalazar@gmail.com
+🔗 ORCID: https://orcid.org/0000-0001-9251-5340
+💻 GitHub: https://github.com/jrz-s
+🎓 Google Scholar: https://scholar.google.com/citations?user=6ECRpM4AAAAJ&hl=pt-BR
 
 ## Collaborators
+
+Eduardo Vinícius S. Oliveira, PhD
+Postdoctoral Researcher, Graduate Program in Ecology and Conservation
+Federal University of Sergipe, São Cristóvão, Sergipe, Brazil
 
 Sidney Feitosa Gouveia, PhD
 Professor, Department of Ecology
 Federal University of Sergipe, São Cristóvão, Sergipe, Brazil
+
