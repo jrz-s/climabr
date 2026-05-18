@@ -7,7 +7,7 @@
 match_region(region)
 }
 \arguments{
-\item{region_input}{Character vector containing user-provided region names.}
+\item{region}{Character vector containing user-provided region names.}
 }
 \value{
 A character vector of matched region names.

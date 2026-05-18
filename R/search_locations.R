@@ -24,14 +24,9 @@ search_locations <- function(region = NULL,
     
     region_match <- match_region(region)
     
-    pattern <- paste(region_match, collapse = "|")
-    
     df <- df %>%
       dplyr::filter(
-        stringr::str_detect(
-          utils_normalize_text(.data$region),
-          pattern
-        )
+        utils_normalize_text(.data$region) %in% region_match
       )
   }
   
@@ -40,40 +35,83 @@ search_locations <- function(region = NULL,
     
     state_abbr <- match_state(state)
     
-    pattern <- paste(state_abbr, collapse = "|")
-    
     df <- df %>%
       dplyr::filter(
-        stringr::str_detect(.data$state, pattern)
+        .data$state %in% state_abbr
       )
   }
   
   # -------- CITY --------
   if (!is.null(city)) {
     
-    city_pattern <- utils_normalize_text(city) %>%
-      paste(collapse = "|")
+    # User input: slug
+    city_clean_input <- utils_normalize_slug(city)
     
+    # Dataset: slug
     df <- df %>%
       dplyr::mutate(
-        city_clean = utils_normalize_text(.data$city_name)
-      ) %>%
+        city_clean = utils_normalize_slug(.data$city_name)
+      )
+    
+    # -------- EXACT MATCH --------
+    
+    df_exact <- df %>%
       dplyr::filter(
-        stringr::str_detect(city_clean, city_pattern)
-      ) %>%
+        city_clean %in% city_clean_input
+      )
+    
+    # Check if ALL cities were found.
+    if (
+      length(unique(df_exact$city_clean)) ==
+      length(city_clean_input)
+    ) {
+      
+      df <- df_exact
+      
+    } else {
+      
+      # -------- PARTIAL MATCH --------
+      
+      pattern <- paste(city_clean_input, collapse = "|")
+      
+      df_partial <- df %>%
+        dplyr::filter(
+          stringr::str_detect(city_clean, pattern)
+        )
+      
+      # Real ambiguity:
+      # only when ONE city was provided
+      if (
+        length(city_clean_input) == 1 &&
+        nrow(df_partial) > 1
+      ) {
+        
+        rlang::abort(
+          paste0(
+            "Multiple cities matched '", city, "'. ",
+            "Please provide a more specific name."
+          )
+        )
+      }
+      
+      df <- df_partial
+    }
+    
+    # Remove auxiliary column
+    df <- df %>%
       dplyr::select(-city_clean)
   }
   
   # -------- VALIDATION --------
   
-  #Nenhum resultado
   if (nrow(df) == 0) {
     
     if (!is.null(city) && !is.null(state)) {
       
       rlang::abort(
         paste0(
-          "No locations found for city '", city,
+          "No locations found for city '",
+          paste(city, collapse = ", "),
           "' in state '", state, "'. ",
           "Please refine your query."
         )
@@ -83,8 +121,9 @@ search_locations <- function(region = NULL,
       
       rlang::abort(
         paste0(
-          "No locations found for city '", city, "'. ",
-          "Please refine your query."
+          "No locations found for city '",
+          paste(city, collapse = ", "),
+          "'. Please refine your query."
         )
       )
       
@@ -92,8 +131,8 @@ search_locations <- function(region = NULL,
       
       rlang::abort(
         paste0(
-          "No locations found for state '", state, "'. ",
-          "Please refine your query."
+          "No locations found for state '", state,
+          "'. Please refine your query."
         )
       )
       
@@ -101,8 +140,8 @@ search_locations <- function(region = NULL,
       
       rlang::abort(
         paste0(
-          "No locations found for region '", region, "'. ",
-          "Please refine your query."
+          "No locations found for region '", region,
+          "'. Please refine your query."
         )
       )
       
@@ -114,15 +153,9 @@ search_locations <- function(region = NULL,
     }
   }
   
-  #Multiplos resultados (quando city foi usada)
-  if (!is.null(city) && nrow(df) > 1) {
-    rlang::abort(
-      paste0(
-        "Multiple cities matched '", city, "'. ",
-        "Please provide a more specific name."
-      )
-    )
-  }
-  
   return(df)
 }
+
+# -------------------------------------------------------------------------
+# -------------------------------------------------------------------------
+# -------------------------------------------------------------------------

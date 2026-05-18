@@ -1,4 +1,4 @@
-#' Main function to retrieve utils_normalize_text
+#' Main function to retrieve utils_normalize_compact
 #'
 #' @title Normalize text
 #' @description Normalizes text by converting to lowercase, removing diacritics, and eliminating whitespace.
@@ -10,12 +10,12 @@
 #' @importFrom purrr map map_dfr compact
 #' @importFrom magrittr %>%
 #' @importFrom rlang abort
-utils_normalize_text <- function(x) {
+utils_normalize_slug <- function(x) {
   
   x %>%
     stringr::str_to_lower() %>%
     stringi::stri_trans_general("Latin-ASCII") %>%
-    stringr::str_squish()
+    stringr::str_replace_all("\\s+", "")
 }
 
 # -------------------------------------------------------------------------

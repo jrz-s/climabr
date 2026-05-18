@@ -6,7 +6,6 @@ Description: An R package to search locations and retrieve climatological data f
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
 URL: https://github.com/jrz-s/climabr
 BugReports: https://github.com/jrz-s/climabr/issues
 Depends: 
@@ -20,3 +19,4 @@ Imports:
     magrittr,
     rlang
 LazyData: true
+Config/roxygen2/version: 8.0.0

@@ -7,7 +7,7 @@
 match_state(state)
 }
 \arguments{
-\item{state_input}{Character vector containing user-provided state names or abbreviations.}
+\item{state}{Character vector containing user-provided state names or abbreviations.}
 }
 \value{
 A character vector of matched state abbreviations.
