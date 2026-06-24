@@ -106,7 +106,7 @@ to structural changes in the data source.
 
 ## Author
 
-Jhonatan Rafael Zárate-Salazar, PhD<br> Postdoctoral Researcher<br>
+Zárate-Salazar, Jhonatan Rafael, PhD<br> Postdoctoral Researcher<br>
 Graduate Program in Ecology and Conservation<br> Federal University of
 Sergipe (UFS), São Cristóvão, Sergipe, Brazil<br>
 
@@ -117,12 +117,12 @@ Sergipe (UFS), São Cristóvão, Sergipe, Brazil<br>
 
 ## Contributors
 
-Omar E. Benites Alfaro, MScD<br> Data AnalytstD<br> Universidad Catolica
-Sedes Sapientiae, Lima, PeruD<br>
+Benites-Alfaro, Omar E., MSc<br> Data Analytst<br> Universidad Catolica
+Sedes Sapientiae, Lima, Peru<br>
 
-Eduardo Vinícius S. Oliveira, PhD<br> Postdoctoral Researcher, Graduate
-Program in Ecology and Conservation<br> Federal University of Sergipe,
-São Cristóvão, Sergipe, Brazil<br>
+Oliveira, Eduardo V. da Silva, PhD<br> Professor, Department of
+Ecology<br> Federal University of Sergipe, São Cristóvão, Sergipe,
+Brazil<br>
 
-Sidney Feitosa Gouveia, PhD<br> Professor, Department of Ecology<br>
+Gouveia, Sidney Feitosa, PhD<br> Professor, Department of Ecology<br>
 Federal University of Sergipe, São Cristóvão, Sergipe, Brazil

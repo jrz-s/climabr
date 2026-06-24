@@ -95,7 +95,7 @@ This package is provided "as is" without warranty of any kind. Its functionality
 
 ## Author
 
-Jhonatan Rafael Zárate-Salazar, PhD<br>
+Zárate-Salazar, Jhonatan Rafael, PhD<br>
 Postdoctoral Researcher<br>
 Graduate Program in Ecology and Conservation<br>
 Federal University of Sergipe (UFS), São Cristóvão, Sergipe, Brazil<br>
@@ -107,14 +107,14 @@ Federal University of Sergipe (UFS), São Cristóvão, Sergipe, Brazil<br>
 
 ## Contributors
 
-Omar E. Benites Alfaro, MScD<br>
-Data AnalytstD<br>
-Universidad Catolica Sedes Sapientiae, Lima, PeruD<br>
+Benites-Alfaro, Omar E., MSc<br>
+Data Analytst<br>
+Universidad Catolica Sedes Sapientiae, Lima, Peru<br>
 
-Eduardo Vinícius S. Oliveira, PhD<br>
-Postdoctoral Researcher, Graduate Program in Ecology and Conservation<br>
+Oliveira, Eduardo V. da Silva, PhD<br>
+Professor, Department of Ecology<br>
 Federal University of Sergipe, São Cristóvão, Sergipe, Brazil<br>
 
-Sidney Feitosa Gouveia, PhD<br>
+Gouveia, Sidney Feitosa, PhD<br>
 Professor, Department of Ecology<br>
 Federal University of Sergipe, São Cristóvão, Sergipe, Brazil
