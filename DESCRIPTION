@@ -1,8 +1,11 @@
 Package: climabr
 Title: Web scraping of climatological data from Climatempo
 Version: 0.1.0
-Authors@R: c(person("Rafael", "Zarate", email = "rzaratesalazar@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9251-5340")))
-Description: An R package to search locations and retrieve climatological data from Climatempo using automated web scraping, designed for ecological and environmental analyses.
+Authors@R: c(
+   person("Rafael", "Zarate", email = "rzaratesalazar@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9251-5340")),
+   person("Omar E.", "Benites-Alfaro", email = "obacc07@gmail.com", role = "ctb", comment = c(ORCID = "0000-0002-6852-9598"))
+   )
+Description: A collection of different functionalities to search locations and retrieve climatological data from Climatempo web platform using automated web scraping, designed for ecological and environmental analyses.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
