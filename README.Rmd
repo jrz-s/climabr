@@ -105,7 +105,11 @@ Federal University of Sergipe (UFS), São Cristóvão, Sergipe, Brazil<br>
 💻 GitHub: https://github.com/jrz-s<br>
 🎓 CV lattes: http://lattes.cnpq.br/5635448203792516<br>
 
-## Collaborators
+## Contributors
+
+Omar E. Benites Alfaro, MScD<br>
+Data AnalytstD<br>
+Universidad Catolica Sedes Sapientiae, Lima, PeruD<br>
 
 Eduardo Vinícius S. Oliveira, PhD<br>
 Postdoctoral Researcher, Graduate Program in Ecology and Conservation<br>
@@ -114,4 +118,3 @@ Federal University of Sergipe, São Cristóvão, Sergipe, Brazil<br>
 Sidney Feitosa Gouveia, PhD<br>
 Professor, Department of Ecology<br>
 Federal University of Sergipe, São Cristóvão, Sergipe, Brazil
-

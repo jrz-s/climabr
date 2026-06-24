@@ -2,7 +2,6 @@ climabr
 ================
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 An R package for providing historical (30-year) average monthly
@@ -116,7 +115,10 @@ Sergipe (UFS), São Cristóvão, Sergipe, Brazil<br>
 <https://github.com/jrz-s><br> 🎓 CV lattes:
 <http://lattes.cnpq.br/5635448203792516><br>
 
-## Collaborators
+## Contributors
+
+Omar E. Benites Alfaro, MScD<br> Data AnalytstD<br> Universidad Catolica
+Sedes Sapientiae, Lima, PeruD<br>
 
 Eduardo Vinícius S. Oliveira, PhD<br> Postdoctoral Researcher, Graduate
 Program in Ecology and Conservation<br> Federal University of Sergipe,
