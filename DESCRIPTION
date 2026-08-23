@@ -1,5 +1,5 @@
 Package: climabr
-Title: Web scraping of climatological data from Climatempo
+Title: Tools for Accessing Weather Data from Climatempo
 Version: 0.1.0
 Authors@R: c(
    person("Jhonatan Rafael", "Zárate-Salazar", email = "rzaratesalazar@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9251-5340")),
@@ -7,7 +7,7 @@ Authors@R: c(
    person("Eduardo V. da Silva", "Oliveira", email = "eduardovso@yahoo.com.br", role = "ctb", comment = c(ORCID = "0000-0003-4858-3930")),
    person("Sidney F.", "Gouveia", email = "sidfgouveia@gmail.com", role = "ctb", comment = c(ORCID = "0000-0003-4941-7440"))
    )
-Description: A collection of different functionalities to search locations and retrieve climatological data from Climatempo web platform using automated web scraping, designed for ecological and environmental analyses.
+Description: An R interface for searching locations and retrieving climatological data from Climatempo web platform using automated web scraping, designed for ecological and environmental analyses.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -24,4 +24,4 @@ Imports:
     magrittr,
     rlang
 LazyData: true
-RoxygenNote: 7.3.2
+Config/roxygen2/version: 8.0.0
